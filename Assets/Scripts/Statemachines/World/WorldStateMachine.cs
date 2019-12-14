@@ -44,4 +44,9 @@ public class WorldStateMachine : StateMachine<World, WorldType>
     {
         base.SetState(newState);
     }
+
+    public void NextState()
+    {
+        CurrentState.NextState();
+    }
 }
