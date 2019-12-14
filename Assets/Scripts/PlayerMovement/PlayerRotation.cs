@@ -6,14 +6,15 @@ using UnityEngine;
 public class PlayerRotation : RigidbodyManipulator
 {
 
-    [SerializeField]
-    private float rotationSpeed = 3;
+    public float rotationSpeed = 9f;
 
-    private void FixedUpdate()
+    void Update()
     {
-        var rot = rb.rotation.eulerAngles;
-        rot.y += Input.GetAxis("Horizontal") * 3;
-        rb.rotation = Quaternion.Euler(rot);
+        float yRotation = transform.localEulerAngles.y;
+        yRotation += Input.GetAxis("Mouse X") * rotationSpeed;
+        var rot = transform.localEulerAngles;
+        rot.y = yRotation;
+        transform.localEulerAngles = rot;
     }
 
 }
