@@ -10,6 +10,21 @@ public class WorldStateMachine : StateMachine<World, WorldType>
     [SerializeField]
     private World[] worldStates;
 
+    private static WorldStateMachine instance = null;
+
+    public static WorldStateMachine Instance { get => instance; }
+
+    private void Awake()
+    {
+        if (WorldStateMachine.instance)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
 
     private void Start()
     {

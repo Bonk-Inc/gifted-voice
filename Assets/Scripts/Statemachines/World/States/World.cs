@@ -7,6 +7,7 @@ public abstract class World : State<WorldType>{
 
     public SceneLoader SceneLoader { get => sceneLoader; set => sceneLoader = value; }
 
+    public abstract void NextState();
     public override void EnterState(WorldType oldState)
     {
         timer = TimerSingleton.Instance;
@@ -18,4 +19,5 @@ public abstract class World : State<WorldType>{
         base.LeaveState(newState);
         SceneLoader.LoadScene(newState.ToString());
     }
+
 }

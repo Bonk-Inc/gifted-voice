@@ -9,6 +9,9 @@ public class Timer : MonoBehaviour
     [SerializeField]
     private float startTime = 60;
 
+    [SerializeField]
+    private bool startInAwake = false;
+
     private Coroutine countDownRoutine;
 
     public float TimeLeft { get; private set; }
@@ -16,6 +19,12 @@ public class Timer : MonoBehaviour
 
     public event Action<float> OnTimeUpdated;
     public UnityEvent OnTimerFinished;
+
+    private void Awake()
+    {
+        if (startInAwake)
+            StartTimer();
+    }
 
     public void StartTimer() {
         ResetTimer();
