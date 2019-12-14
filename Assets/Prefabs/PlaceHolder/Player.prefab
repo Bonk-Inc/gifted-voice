@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &37358165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 37358166}
+  m_Layer: 0
+  m_Name: Camera Pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &37358166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37358165}
+  m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
+  m_LocalPosition: {x: 0, y: 4.98, z: -3.94}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6569480443165489212}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
 --- !u!1 &6569480443165489207
 GameObject:
   m_ObjectHideFlags: 0
@@ -14,9 +44,11 @@ GameObject:
   - component: {fileID: 6569480443165489201}
   - component: {fileID: 6569480443165489200}
   - component: {fileID: 3328624684800996437}
-  m_Layer: 0
+  - component: {fileID: 1899768277}
+  - component: {fileID: 1899768278}
+  m_Layer: 30
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,6 +66,7 @@ Transform:
   m_Children:
   - {fileID: 6406794146844507404}
   - {fileID: 8460443132336188280}
+  - {fileID: 37358166}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -111,7 +144,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 52
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &3328624684800996437
 MonoBehaviour:
@@ -125,6 +158,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 510f6f3382aaaba49acedc031e13d389, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1899768277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6569480443165489207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021f585bb2e3695408364d16cf9fd956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 6569480443165489200}
+  speed: 20
+--- !u!114 &1899768278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6569480443165489207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1982c31383637c43af2821931174c95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 6569480443165489200}
+  rotationSpeed: 9
 --- !u!1 &6703317516381199383
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6703317516381199383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.367, z: -0.506}
+  m_LocalPosition: {x: 0.039, y: 0.367, z: 0.498}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 6569480443165489212}
@@ -229,6 +290,7 @@ GameObject:
   - component: {fileID: 2270410700554428570}
   - component: {fileID: 9033086290471849383}
   - component: {fileID: 9114810421805017443}
+  - component: {fileID: 2122172622}
   m_Layer: 0
   m_Name: Detector
   m_TagString: Untagged
@@ -244,7 +306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6866635563054091908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.409, z: -0.887}
+  m_LocalPosition: {x: 0, y: -0.409, z: 1.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6569480443165489212}
@@ -283,5 +345,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2acc5b61058135242af00535d8a6fb90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colliderLayer: 8
+  colliderLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  inventory: {fileID: 3328624684800996437}
+--- !u!114 &2122172622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6866635563054091908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131e509e52ce5a64e87bd9a53b5caaa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderLayer:
+    serializedVersion: 2
+    m_Bits: 2147483648
   inventory: {fileID: 3328624684800996437}

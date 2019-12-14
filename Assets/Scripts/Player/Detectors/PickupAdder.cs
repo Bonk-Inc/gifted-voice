@@ -11,6 +11,8 @@ public class PickupAdder : Detector
     {
         if(!CheckCollider(collider.gameObject) || !Input.GetKeyDown(KeyCode.Space)) return;
 
+        if (inventory.CheckIfFull()) return;
+
         Pickup newpickup = collider.gameObject.GetComponent<Pickup>();
         newpickup?.OnPickedUp();
         inventory.AddSingleSlot(newpickup);
