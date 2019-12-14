@@ -17,7 +17,7 @@ public class PlayerFloorController : MonoBehaviour
 
     public event Action LastFloorCompleted;
 
-    private void Awake()
+    private void Start()
     {
         for (int i = 0; i < floors.Length; i++)
         {

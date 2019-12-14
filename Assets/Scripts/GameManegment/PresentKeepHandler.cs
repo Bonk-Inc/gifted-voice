@@ -32,6 +32,7 @@ public class PresentKeepHandler : MonoBehaviour
 
     public Present GetPresent(string id)
     {
+
         if (!presents.ContainsKey(id))
             return null;
 
