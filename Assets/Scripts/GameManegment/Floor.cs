@@ -11,13 +11,25 @@ public class Floor : MonoBehaviour
     [SerializeField]
     private CompletementCounter counter;
 
-    public bool FloorCompleted()
+    [SerializeField]
+    private Apartment[] apartments;
+
+    private int id;
+
+    public void SetId(int id)
     {
+        this.id = id;
+        for (int i = 0; i < apartments.Length; i++)
+        {
+            apartments[i].SetId(id, i);
+        }
+    }
+
+    public bool FloorCompleted() {
         return counter.IsCompleted();
     }
 
-    public void TeleportPlayer(GameObject player)
-    {
+    public void TeleportPlayer(GameObject player) {
         var playerMesh = player.GetComponent<MeshRenderer>();
 
         player.transform.position = spawnLocation.position;
