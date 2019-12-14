@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class Inventory<T> : MonoBehaviour
 {
 
-    protected List<T> inventorySlots;
+    protected List<T> inventorySlots = new List<T>();
 
     public virtual T GetInventorySlot(int slotNumber)
     {
