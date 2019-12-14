@@ -22,6 +22,11 @@ public class KarelsWorld : World
         base.LeaveState(newState);
     }
 
+    public override void NextState()
+    {
+        WorldStateMachine.Instance.SetState(WorldType.HumanWorld);
+    }
+
     public override void UpdateState()
     {
         base.UpdateState();

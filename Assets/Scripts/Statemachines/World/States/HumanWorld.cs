@@ -21,6 +21,11 @@ public class HumanWorld : World
         base.LeaveState(newState);
     }
 
+    public override void NextState()
+    {
+        WorldStateMachine.Instance.SetState(WorldType.DemonWorld);
+    }
+
     public override void UpdateState()
     {
         base.UpdateState();

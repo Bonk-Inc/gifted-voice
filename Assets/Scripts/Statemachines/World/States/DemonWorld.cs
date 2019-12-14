@@ -25,6 +25,11 @@ public class DemonWorld : World
         base.LeaveState(newState);
     }
 
+    public override void NextState()
+    {
+        WorldStateMachine.Instance.SetState(WorldType.KarelsWorld);
+    }
+
     public override void UpdateState()
     {
         base.UpdateState();

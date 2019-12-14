@@ -12,7 +12,6 @@ public class TimerUI : MonoBehaviour
 
     private void Start() {
         timer.OnTimeUpdated += UpdateTimerText;
-        timer.StartTimer();
     }
 
     private void UpdateTimerText(float timeLeft) {
