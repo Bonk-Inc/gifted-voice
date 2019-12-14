@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GlobalInventory : MonoBehaviour
+public class GlobalInventory : Inventory<Pickup>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private static GlobalInventory instance = null;
 
-    // Update is called once per frame
-    void Update()
+    public static GlobalInventory Instance { get => instance; set => instance = value; }
+
+    private void Awake()
     {
-        
+        if (GlobalInventory.Instance)
+            Destroy(this);
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
     }
 }
