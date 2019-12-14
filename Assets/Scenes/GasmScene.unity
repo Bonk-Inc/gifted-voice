@@ -409,7 +409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 292654248}
-  followSpeed: 1
+  followSpeed: 5
 --- !u!1 &1763477289 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6866635563054091908, guid: c3cd1a627210f8f4aa7e104c4350ebc9,

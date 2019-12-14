@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Movement.unity
     guid: 66dccb49acf7a3247a637411426cce09
+  - enabled: 1
+    path: Assets/Scenes/Worlds/KarelsWorld.unity
+    guid: 41e0397d86f2be645bd441fcdc00f03c
+  - enabled: 1
+    path: Assets/Scenes/Worlds/HumanWorld.unity
+    guid: c421e900187a01c4ab8a89650f0f7392
+  - enabled: 1
+    path: Assets/Scenes/Worlds/DemonWorld.unity
+    guid: 3a1b43876321b8c46b755ad512b3cbb1
   m_configObjects: {}
