@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WorldStateMachine : StateMachine<World, WorldType>
 {
+    private bool stateSets = false;
     [SerializeField]
     private SceneLoader sceneloader;
 
@@ -14,7 +15,8 @@ public class WorldStateMachine : StateMachine<World, WorldType>
 
     public static WorldStateMachine Instance { get => instance; }
 
-    private bool stateSets = false;
+
+    public int currentFloor;
 
     private void Awake()
     {
@@ -49,6 +51,7 @@ public class WorldStateMachine : StateMachine<World, WorldType>
         base.SetState(newState);
     }
 
+    [ContextMenu("Next State")]
     public void NextState()
     {
         CurrentState.NextState();

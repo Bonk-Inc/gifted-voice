@@ -15,11 +15,15 @@ public class DemonWorld : World
     public override void EnterState(WorldType oldState)
     {
         base.EnterState(oldState);
+        if (PresentKeepHandler.Instance)
+            PresentKeepHandler.Instance.gameObject.SetActive(true);
     }
 
     public override void LeaveState(WorldType newState)
     {
         base.LeaveState(newState);
+        if (PresentKeepHandler.Instance)
+            PresentKeepHandler.Instance.gameObject.SetActive(false);
     }
 
     public override void NextState()
@@ -30,5 +34,6 @@ public class DemonWorld : World
     public override void UpdateState()
     {
         base.UpdateState();
+        
     }
 }
