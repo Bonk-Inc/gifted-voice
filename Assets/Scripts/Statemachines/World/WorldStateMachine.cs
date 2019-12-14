@@ -5,13 +5,18 @@ using UnityEngine;
 public class WorldStateMachine : StateMachine<World, WorldType>
 {
     [SerializeField]
+    private SceneLoader sceneloader;
+
+    [SerializeField]
     private World[] worldStates;
+
 
     private void Start()
     {
         for (int i = 0; i < worldStates.Length; i++)
         {
             AddState(worldStates[i].Name, worldStates[i]);
+            worldStates[i].SceneLoader = sceneloader;
         }
     }
 
@@ -23,10 +28,5 @@ public class WorldStateMachine : StateMachine<World, WorldType>
     public override void SetState(WorldType newState)
     {
         base.SetState(newState);
-    }
-
-    public void SetStateToHuman()
-    {
-        SetState(WorldType.HumanWorld);
     }
 }

@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class DemonWorld : World
 {
+    [SerializeField]
+    private float startTime;
+
     public override WorldType Name => WorldType.DemonWorld;
 
     public override void CheckState(StateMachine<State<WorldType>, WorldType> stateMachine)
     {
         base.CheckState(stateMachine);
+
     }
 
     public override void EnterState(WorldType oldState)

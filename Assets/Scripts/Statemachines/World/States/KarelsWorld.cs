@@ -8,6 +8,7 @@ public class KarelsWorld : World
 
     public override void CheckState(StateMachine<State<WorldType>, WorldType> stateMachine)
     {
+
         base.CheckState(stateMachine);
     }
 
