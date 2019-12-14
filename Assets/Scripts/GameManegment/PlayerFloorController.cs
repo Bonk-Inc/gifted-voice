@@ -19,6 +19,7 @@ public class PlayerFloorController : MonoBehaviour
 
     private void Start()
     {
+        SetFloor(WorldStateMachine.Instance.currentFloor);
         for (int i = 0; i < floors.Length; i++)
         {
             floors[i].SetId(i);
@@ -38,6 +39,7 @@ public class PlayerFloorController : MonoBehaviour
         }
 
         currentFloor = floor;
+        WorldStateMachine.Instance.currentFloor = currentFloor;
         floors[currentFloor].TeleportPlayer(player);
     }
 
