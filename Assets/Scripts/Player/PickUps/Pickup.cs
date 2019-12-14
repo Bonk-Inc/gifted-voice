@@ -7,7 +7,7 @@ public abstract class Pickup : MonoBehaviour
 {
     public event Action PickedUp;
 
-    protected virtual void OnPickedUp()
+    public virtual void OnPickedUp()
     {
         print("Pick me up ;)");
         PickedUp?.Invoke();
