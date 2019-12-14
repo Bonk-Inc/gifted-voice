@@ -17,6 +17,14 @@ public class PlayerFloorController : MonoBehaviour
 
     public event Action LastFloorCompleted;
 
+    private void Start()
+    {
+        for (int i = 0; i < floors.Length; i++)
+        {
+            floors[i].SetId(i);
+        }
+    }
+
     public void NextFloor()
     {
         SetFloor(currentFloor + 1);

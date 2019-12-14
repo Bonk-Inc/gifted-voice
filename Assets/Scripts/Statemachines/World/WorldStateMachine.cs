@@ -45,6 +45,7 @@ public class WorldStateMachine : StateMachine<World, WorldType>
         base.SetState(newState);
     }
 
+    [ContextMenu("Next State")]
     public void NextState()
     {
         CurrentState.NextState();

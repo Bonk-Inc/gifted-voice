@@ -32,8 +32,6 @@ public class PutDownDetector : Detector
 
         placement.PlacePresent(present);
 
-        
-        collider.gameObject.SetActive(!placement.HasPresent);
     }
 
     private Pickup PickPresent(int index, Inventory<Pickup> inventory)
