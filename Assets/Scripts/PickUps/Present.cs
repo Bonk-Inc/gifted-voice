@@ -5,7 +5,10 @@ using UnityEngine;
 public class Present : Pickup
 {
     [SerializeField]
-    private PresentType presentType;
+    private PresentType type;
+    [SerializeField, Range(0,5)]
+    private int weight = 1;
 
-    public PresentType PresentType { get => presentType; }
+    public PresentType Type { get => type; }
+    public int Weight { get => weight;}
 }

@@ -2,21 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickupDetector : Detector
+public class PickupAdder : Detector
 {
-
     [SerializeField]
     private LocalInventory inventory;
 
     protected override void OnTriggerStay(Collider collider)
     {
-        if (collider.gameObject.layer != colliderLayer || !Input.GetKeyDown(KeyCode.Space))
-            return;
+        if(!CheckCollider(collider.gameObject) || !Input.GetKeyDown(KeyCode.Space)) return;
 
         Pickup newpickup = collider.gameObject.GetComponent<Pickup>();
         newpickup?.OnPickedUp();
         inventory.AddSingleSlot(newpickup);
-
         collider.gameObject.SetActive(false);
     }
 }

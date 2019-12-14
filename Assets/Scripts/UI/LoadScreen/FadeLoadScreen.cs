@@ -17,11 +17,13 @@ public class FadeLoadScreen : LoadScreen
     
     public override void CloseLoadscreen(Action onLoadscreenClose = null)
     {
+        onLoadscreenClose += () => loadImage.raycastTarget = false;
         ChangeAlphaTo(0, onLoadscreenClose);
     }
 
     public override void OpenLoadscreen(Action onLoadscreenOpen = null)
     {
+        loadImage.raycastTarget= true;
         ChangeAlphaTo(1, onLoadscreenOpen);
     }
 
