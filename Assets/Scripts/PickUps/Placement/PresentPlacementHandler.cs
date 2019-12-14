@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PresentPlacementHandler : MonoBehaviour
+public class PresentPlacementHandler : Completable
 {
 
     [SerializeField]
@@ -31,5 +31,8 @@ public class PresentPlacementHandler : MonoBehaviour
         return present != null && present.Type == requiredType;
     }
 
-
+    public override bool IsCompleted()
+    {
+        return HasPresent;
+    }
 }
