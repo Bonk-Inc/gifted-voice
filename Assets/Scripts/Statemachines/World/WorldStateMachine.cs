@@ -14,9 +14,11 @@ public class WorldStateMachine : StateMachine<World, WorldType>
 
     public static WorldStateMachine Instance { get => instance; }
 
+    private bool stateSets = false;
+
     private void Awake()
     {
-        if (WorldStateMachine.instance)
+        if (WorldStateMachine.instance && WorldStateMachine.instance != this)
         {
             Destroy(gameObject);
             return;
@@ -25,11 +27,13 @@ public class WorldStateMachine : StateMachine<World, WorldType>
         DontDestroyOnLoad(gameObject);
     }
 
-
     private void Start()
     {
+        TimerSingleton.Instance.OnTimerFinished.AddListener(NextState);
+        if (stateSets) return;
         for (int i = 0; i < worldStates.Length; i++)
         {
+            stateSets = true;
             AddState(worldStates[i].Name, worldStates[i]);
             worldStates[i].SceneLoader = sceneloader;
         }

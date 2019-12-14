@@ -17,7 +17,6 @@ public class SceneLoader : MonoBehaviour
         var operation = SceneManager.LoadSceneAsync(sceneName);
         operation.allowSceneActivation = false;
         loadScreen.LoadUntil(() => {
-            TimerSingleton.Instance.OnTimerFinished.AddListener(WorldStateMachine.Instance.NextState);
             return operation.progress == 1;
         }, () => {
             operation.allowSceneActivation = true;

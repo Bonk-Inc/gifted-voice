@@ -17,6 +17,7 @@ public abstract class World : State<WorldType>{
     public override void LeaveState(WorldType newState)
     {
         base.LeaveState(newState);
+        print(newState.ToString());
         SceneLoader.LoadScene(newState.ToString());
     }
 

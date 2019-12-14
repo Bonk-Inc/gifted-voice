@@ -20,7 +20,12 @@ public class LocalInventory : Inventory<Pickup>
 
     public override void AddSingleSlot(Pickup item)
     {
-        if(inventorySlots?.Count <= maxInventorySlots)
+        if(!CheckIfFull())
             base.AddSingleSlot(item);
+    }
+
+    public bool CheckIfFull()
+    {
+        return inventorySlots?.Count >= maxInventorySlots;
     }
 }
