@@ -7,6 +7,8 @@ public abstract class Inventory<T> : MonoBehaviour
 
     protected List<T> inventorySlots = new List<T>();
 
+    public virtual int Count => inventorySlots.Count;
+
     public virtual T GetInventorySlot(int slotNumber)
     {
         return inventorySlots[slotNumber];

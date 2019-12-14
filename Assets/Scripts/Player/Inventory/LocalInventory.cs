@@ -11,6 +11,9 @@ public class LocalInventory : Inventory<Pickup>
 
     private void Start()
     {
+        if (GlobalInventory.Instance == null)
+            return;
+
         GlobalInventory.Instance.ExchangeAllToInventory(this);
         GlobalInventory.Instance.ClearInventory();
     }
