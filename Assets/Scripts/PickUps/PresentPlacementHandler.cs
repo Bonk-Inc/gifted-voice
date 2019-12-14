@@ -28,7 +28,7 @@ public class PresentPlacementHandler : MonoBehaviour
     public bool CheckRequirements(Present present)
     {
 
-        return present.Type == requiredType;
+        return present != null && present.Type == requiredType;
     }
 
 
