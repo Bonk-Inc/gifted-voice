@@ -9,6 +9,17 @@ public class PlayerWalking : RigidbodyManipulator
     private float speed;
 
     void Update() {
-        rb.velocity = transform.forward * speed * Input.GetAxis("Vertical"); 
+
+        var velocity = Vector3.zero;
+        velocity += transform.forward * speed * Input.GetAxis("Vertical");
+        velocity += transform.right * speed * Input.GetAxis("Horizontal");
+
+
+        if (velocity.magnitude > speed)
+        {
+            velocity.Normalize();
+            velocity *= speed;
+        }
+        rb.velocity = velocity;
     }
 }

@@ -14,7 +14,7 @@ public class FollowObject : MonoBehaviour
     private void FixedUpdate()
     {
         transform.position = Vector3.Lerp(transform.position, target.position, followSpeed * Time.deltaTime);
-        transform.rotation = target.rotation;
+        transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, followSpeed * Time.deltaTime);
     }
 
 }
