@@ -43,6 +43,11 @@ public class Timer : MonoBehaviour
         StopCoroutine(countDownRoutine);
     }
 
+    public void ChangeTimeLeft(float amount)
+    {
+        TimeLeft += amount; 
+    }
+
     private IEnumerator CountDown() {
 
         while(TimeLeft > 0) {
