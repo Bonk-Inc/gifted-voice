@@ -47,5 +47,6 @@ public abstract class Inventory<T> : MonoBehaviour
     public virtual void ExchangeAllToInventory(Inventory<T> nextInventory)
     {
         nextInventory.AddMultipleSlots(inventorySlots.ToArray());
+        ClearInventory();
     }
 }

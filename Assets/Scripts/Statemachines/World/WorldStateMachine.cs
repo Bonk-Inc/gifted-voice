@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WorldStateMachine : StateMachine<World, WorldType>
 {
@@ -31,8 +32,10 @@ public class WorldStateMachine : StateMachine<World, WorldType>
 
     private void Start()
     {
-        TimerSingleton.Instance?.OnTimerFinished.AddListener(NextState);
-
+        SceneManager.activeSceneChanged += (scene1, scene2) =>
+        {
+            TimerSingleton.Instance?.OnTimerFinished.AddListener(NextState);
+        };
         if (stateSets) return;
         for (int i = 0; i < worldStates.Length; i++)
         {
