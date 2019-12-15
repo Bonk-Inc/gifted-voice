@@ -6,21 +6,44 @@ public class PlayerWalking : RigidbodyManipulator
 {
 
     [SerializeField]
+    private LocalInventory inventory;
+    [SerializeField]
     private float speed;
+    [SerializeField]
+    private int maxWeight;
+    [SerializeField]
+    private float encumberedMultiplier = 2f;
+    private bool isEncumbered = false;
 
-    void Update() {
+    public int MaxWeight { get => maxWeight; set => maxWeight = value; }
+
+
+    private void Awake()
+    {
+        inventory.OnInventoryUpdate += CheckEncumbered;
+    }
+
+    private void Update() {
+        float currentSpeed = isEncumbered ? speed : speed / encumberedMultiplier;
+
 
         var velocity = Vector3.zero;
-        velocity += transform.forward * speed * Input.GetAxis("Vertical");
-        velocity += transform.right * speed * Input.GetAxis("Horizontal");
+
+        velocity += transform.forward * currentSpeed * Input.GetAxis("Vertical");
+        velocity += transform.right * currentSpeed * Input.GetAxis("Horizontal");
 
 
         if (velocity.magnitude > speed)
         {
             velocity.Normalize();
-            velocity *= speed;
+            velocity *= currentSpeed;
         }
         rb.velocity = velocity;
+    }
+
+    private void CheckEncumbered()
+    {
+        isEncumbered = inventory.GetWeight() < MaxWeight;
     }
 
     public void AddSpeed(float amount)

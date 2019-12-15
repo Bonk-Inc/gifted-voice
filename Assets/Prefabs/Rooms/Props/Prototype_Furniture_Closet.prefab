@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2497578618878699926}
   - component: {fileID: 1782469066207553610}
   m_Layer: 0
-  m_Name: Prototype_Furniture_Closet (1)
+  m_Name: Prototype_Furniture_Closet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 2e6d5266c8cf52b46b4651d60f8506cb, type: 3}
+  - {fileID: 2100000, guid: 92708b6a9094b4b5ea1c08529f33934a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

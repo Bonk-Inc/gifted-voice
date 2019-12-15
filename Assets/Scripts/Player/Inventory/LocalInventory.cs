@@ -20,12 +20,25 @@ public class LocalInventory : Inventory<Pickup>
 
     public override void AddSingleSlot(Pickup item)
     {
-        if(!CheckIfFull())
+        if (!CheckIfFull())
+        {
             base.AddSingleSlot(item);
+        }
     }
 
     public bool CheckIfFull()
     {
         return inventorySlots?.Count >= maxInventorySlots;
+    }
+
+    public int GetWeight()
+    {
+        int weight = 0;
+        Pickup[] pickups = GetAllSlots();
+        for (int i = 0; i < pickups.Length; i++)
+        {
+            weight += pickups[i].Weight;
+        }
+        return weight;
     }
 }

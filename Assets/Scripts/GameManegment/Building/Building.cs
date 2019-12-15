@@ -63,7 +63,7 @@ public class Building : MonoBehaviour
         for (int i = 0; i < pickupAmount; i++)
         {
             PickupSpot currentSpot = ChooseSpot();
-
+            pickupSpots.Remove(currentSpot);
             Pickup currentPickup = ChoosePickup(currentSpot.MaximumWeight);
 
             currentPickup = Instantiate(currentPickup);
