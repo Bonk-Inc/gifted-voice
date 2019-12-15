@@ -10,10 +10,14 @@ public class PresentPlacementHandler : Completable
 
     public bool HasPresent { get; private set; } = false;
 
+    private Present present;
     private string id;
 
     public void PlacePresent(Present present )
     {
+        if (HasPresent)
+            return;
+
         if (!CheckRequirements(present))
             return;
 
@@ -25,7 +29,9 @@ public class PresentPlacementHandler : Completable
         present.transform.Translate(0, presentMeshRenderer.bounds.extents.y, 0);
         PresentKeepHandler.Instance.AddPresent(this.id, present);
         gameObject.SetActive(false);
+        this.present = present;
         HasPresent = true;
+
     }
 
     public bool CheckRequirements(Present present)

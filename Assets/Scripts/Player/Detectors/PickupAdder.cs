@@ -7,9 +7,25 @@ public class PickupAdder : Detector
     [SerializeField]
     private LocalInventory inventory;
 
+    private Collider collider;
+
+    protected void OnTriggerEnter(Collider collider)
+    {
+        this.collider = collider;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        this.collider = null;
+    }
+
     protected override void OnTriggerStay(Collider collider)
     {
-        if(!CheckCollider(collider.gameObject) || !Input.GetKeyDown(KeyCode.Space)) return;
+    }
+
+    private void Update()
+    {
+        if (collider == null || !CheckCollider(collider.gameObject) || !Input.GetKeyDown(KeyCode.Space)) return;
 
         if (inventory.CheckIfFull()) return;
 
@@ -17,5 +33,6 @@ public class PickupAdder : Detector
         newpickup?.OnPickedUp();
         inventory.AddSingleSlot(newpickup);
         collider.gameObject.SetActive(false);
+        collider = null;
     }
 }
