@@ -15,11 +15,17 @@ public class Door : MonoBehaviour
 
     protected void OnTriggerEnter(Collider other)
     {
+        if (!other.CompareTag("Player"))
+            return;
+
         this.other = other;
     }
 
     private void OnTriggerExit(Collider other)
     {
+        if (!other.CompareTag("Player"))
+            return;
+
         this.other = null;
     }
 

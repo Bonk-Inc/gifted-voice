@@ -11,12 +11,14 @@ public class PickupAdder : Detector
 
     protected void OnTriggerEnter(Collider collider)
     {
-        this.collider = collider;
+        if (CheckCollider(collider.gameObject))
+            this.collider = collider;
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider collider)
     {
-        this.collider = null;
+        if (CheckCollider(collider.gameObject))
+            this.collider = null;
     }
 
     protected override void OnTriggerStay(Collider collider)
@@ -25,7 +27,7 @@ public class PickupAdder : Detector
 
     private void Update()
     {
-        if (collider == null || !CheckCollider(collider.gameObject) || !Input.GetKeyDown(KeyCode.Space)) return;
+        if (collider == null || !Input.GetKeyDown(KeyCode.Space)) return;
 
         if (inventory.CheckIfFull()) return;
 
