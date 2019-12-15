@@ -7,10 +7,13 @@ public class StrengthBoost : BoostEffect
     public override BoostType Type => BoostType.strengh;
 
     [SerializeField]
-    private float addedStrength;
+    private PlayerWalking playerWalking;
+
+    [SerializeField]
+    private int addedStrength;
 
     public override void Boost()
     {
-        //TODO implement (:
+        playerWalking.MaxWeight += addedStrength;
     }
 }
