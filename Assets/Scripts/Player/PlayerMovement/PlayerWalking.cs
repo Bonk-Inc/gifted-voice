@@ -22,4 +22,9 @@ public class PlayerWalking : RigidbodyManipulator
         }
         rb.velocity = velocity;
     }
+
+    public void AddSpeed(float amount)
+    {
+        speed += amount;
+    }
 }
