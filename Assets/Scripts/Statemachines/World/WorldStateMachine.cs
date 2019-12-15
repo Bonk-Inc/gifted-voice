@@ -31,7 +31,8 @@ public class WorldStateMachine : StateMachine<World, WorldType>
 
     private void Start()
     {
-        TimerSingleton.Instance.OnTimerFinished.AddListener(NextState);
+        TimerSingleton.Instance?.OnTimerFinished.AddListener(NextState);
+
         if (stateSets) return;
         for (int i = 0; i < worldStates.Length; i++)
         {
