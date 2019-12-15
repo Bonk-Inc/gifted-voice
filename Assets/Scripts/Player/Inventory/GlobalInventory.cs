@@ -9,6 +9,7 @@ public class GlobalInventory : Inventory<Pickup>
 
     public static GlobalInventory Instance { get => instance; set => instance = value; }
 
+
     private void Awake()
     {
         if (GlobalInventory.Instance)
@@ -20,19 +21,32 @@ public class GlobalInventory : Inventory<Pickup>
         }
     }
 
-    public override void AddMultipleSlots(Pickup[] item)
+    public override void AddMultipleSlots(Pickup[] items)
     {
-        base.AddMultipleSlots(item);
-        for (int i = 0; i < item.Length; i++)
-        {
-            SavePickup(item[i]);
+        List<Pickup> itemsList = new List<Pickup>(items); 
+        for (int i = 0; i < items.Length; i++) {
+            if (items[i] is BoostPickup) {
+                (items[i] as BoostPickup).RegisterBoost();
+                itemsList.RemoveAt(i);
+            }
+            else {
+                SavePickup(items[i]);
+            }
         }
+
+        base.AddMultipleSlots(itemsList.ToArray());
     }
 
     public override void AddSingleSlot(Pickup item)
     {
-        base.AddSingleSlot(item);
-        SavePickup(item);
+        if(item is BoostPickup) {
+            (item as BoostPickup).RegisterBoost();
+        } else {
+            base.AddSingleSlot(item);
+            SavePickup(item);
+        }
+
+        
     }
 
     public override void RemoveSlot(int slotNumber)
