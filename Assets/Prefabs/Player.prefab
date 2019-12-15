@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02caec0fdf01553408e424582d37d76f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider: {fileID: 9033086290471849383}
+  reachCollider: {fileID: 9033086290471849383}
   sizeIncrease: 2
 --- !u!1 &4260159402067479583
 GameObject:
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerWalking: {fileID: 1899768277}
-  speedAddition: 10
+  speedAddition: 6
 --- !u!1 &6569480443165489207
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ec282341adfd348b20eee4968e46da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerWalking: {fileID: 0}
+  playerWalking: {fileID: 1899768277}
   addedStrength: 0
 --- !u!1 &8254111296563518247
 GameObject:
@@ -536,11 +536,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Running
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 7eb55c59eb100a9439771b8333b04078,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 4f580b95d4151094eb121d7d3cadbf34, type: 2}
     - target: {fileID: -4216859302048453862, guid: 7eb55c59eb100a9439771b8333b04078,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -611,6 +606,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 7eb55c59eb100a9439771b8333b04078,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4f580b95d4151094eb121d7d3cadbf34, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eb55c59eb100a9439771b8333b04078, type: 3}
 --- !u!4 &965942187986845070 stripped
