@@ -304,7 +304,7 @@ PrefabInstance:
     - target: {fileID: 3539530171787496680, guid: 7a382e3a88bbf0541a697d92ad3bdedb,
         type: 3}
       propertyPath: roomLayouts.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3539530171787496680, guid: 7a382e3a88bbf0541a697d92ad3bdedb,
         type: 3}
@@ -321,7 +321,7 @@ PrefabInstance:
         type: 3}
       propertyPath: roomLayouts.Array.data[2]
       value: 
-      objectReference: {fileID: -3825531704414110129, guid: f5c5eb45434322640a4a23ab24febb9e,
+      objectReference: {fileID: 1708976098694983783, guid: 92ba0eba8ae48fe4392899b7915814b2,
         type: 3}
     - target: {fileID: 3539530171787496680, guid: 7a382e3a88bbf0541a697d92ad3bdedb,
         type: 3}
