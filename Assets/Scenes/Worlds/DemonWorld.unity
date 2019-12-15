@@ -1970,12 +1970,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7786851852587673525}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &1656467791 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 6569480443165489200, guid: c3cd1a627210f8f4aa7e104c4350ebc9,
-    type: 3}
-  m_PrefabInstance: {fileID: 7786851852587673525}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1754484705 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 656274444901502375, guid: 73c752fecfa56664c92c3611bd15101c,
@@ -4347,34 +4341,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7786851852218925780}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &7786851852293053057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1656467788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 021f585bb2e3695408364d16cf9fd956, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1656467791}
-  speed: 20
---- !u!114 &7786851852293053058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1656467788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1982c31383637c43af2821931174c95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1656467791}
-  rotationSpeed: 9
 --- !u!1001 &7786851852325396071
 PrefabInstance:
   m_ObjectHideFlags: 0

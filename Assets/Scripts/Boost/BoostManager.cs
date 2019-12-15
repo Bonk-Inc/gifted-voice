@@ -14,6 +14,7 @@ public class BoostManager : MonoBehaviour
 
     private void Awake()
     {
+        
         if (Instance != null) {
             Destroy(this);
             return;

@@ -27,7 +27,7 @@ public class GlobalInventory : Inventory<Pickup>
         for (int i = 0; i < items.Length; i++) {
             if (items[i] is BoostPickup) {
                 (items[i] as BoostPickup).RegisterBoost();
-                itemsList.RemoveAt(i);
+                itemsList.Remove(items[i]);
             }
             else {
                 SavePickup(items[i]);

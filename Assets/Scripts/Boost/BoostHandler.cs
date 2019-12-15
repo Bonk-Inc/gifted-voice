@@ -23,6 +23,7 @@ public class BoostHandler : MonoBehaviour
         BoostManager.Instance.BooostRegistered += StartBoost;
         BoostManager.Instance.CheckBoosts((boostType) =>
         {
+            print("boost: " + boostType);
             StartBoost(boostType);
             return false;
         });
@@ -33,6 +34,7 @@ public class BoostHandler : MonoBehaviour
         if (boostsDict == null || !boostsDict.ContainsKey(boost))
             return;
 
+        print("Boost!!");
         boostsDict[boost].Boost();
     }
 

@@ -16,11 +16,13 @@ public class RoundManager : MonoBehaviour
 
     public static RoundManager Instance { get; private set; }
 
+    public int LastRound => lastRound;
+
     public bool RoundsOver { get; private set; }
 
     private void Awake()
     {
-        if (Instance == null)
+        if (Instance != null)
         {
             Destroy(this);
             return;
@@ -39,6 +41,11 @@ public class RoundManager : MonoBehaviour
             lastRoundOver?.Invoke();
             RoundsOver = true;
         }
+    }
+
+    public void SetLastRound(int lastRound)
+    {
+        this.lastRound = lastRound;
     }
 
 }
