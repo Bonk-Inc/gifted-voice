@@ -7,6 +7,12 @@ public abstract class World : State<WorldType>{
 
     public SceneLoader SceneLoader { get => sceneLoader; set => sceneLoader = value; }
 
+    private void Start()
+    {
+        timer = TimerSingleton.Instance;
+        sceneLoader = SceneLoader.Instance;
+    }
+
     public abstract void NextState();
     public override void EnterState(WorldType oldState)
     {

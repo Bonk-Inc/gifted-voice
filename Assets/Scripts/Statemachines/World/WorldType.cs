@@ -2,5 +2,6 @@
 {
     KarelsWorld,
     HumanWorld,
-    DemonWorld
+    DemonWorld,
+    EndGame,
 }

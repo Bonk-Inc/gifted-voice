@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class RoundManager : MonoBehaviour
 {
@@ -12,12 +13,13 @@ public class RoundManager : MonoBehaviour
     private int currentRound = 0;
 
     public event Action<int> roundChanged;
-    public event Action lastRoundOver;
+    public UnityEvent lastRoundOver;
 
     public static RoundManager Instance { get; private set; }
 
     public int LastRound => lastRound;
     public int CurrentRound => currentRound;
+    public bool IsLastRound => currentRound == lastRound;
 
     public bool RoundsOver { get; private set; }
 

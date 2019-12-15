@@ -11,7 +11,6 @@ public class KarelsCalender : MonoBehaviour
 
     private void Start()
     {
-        print("last: " + RoundManager.Instance.LastRound + "  Current: " + RoundManager.Instance.CurrentRound);
         calenderText.text = Mathf.Abs(RoundManager.Instance.LastRound - RoundManager.Instance.CurrentRound).ToString();
     }
 
