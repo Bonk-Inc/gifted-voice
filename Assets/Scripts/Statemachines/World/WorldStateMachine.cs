@@ -16,7 +16,6 @@ public class WorldStateMachine : StateMachine<World, WorldType>
 
     public static WorldStateMachine Instance { get => instance; }
 
-
     public int currentFloor;
 
     private void Awake()

@@ -8,7 +8,11 @@ public class PresentPlacementHandler : Completable
     [SerializeField]
     private PresentType requiredType;
 
+    [SerializeField]
+    private bool positionAsGround = false;
+
     public bool HasPresent { get; private set; } = false;
+
 
     private Present present;
     private string id;
@@ -26,7 +30,8 @@ public class PresentPlacementHandler : Completable
         present.gameObject.SetActive(true);
         present.gameObject.layer = 0;
         present.transform.position = transform.position;
-        present.transform.Translate(0, presentMeshRenderer.bounds.extents.y, 0);
+        if (positionAsGround)
+            present.transform.Translate(0, presentMeshRenderer.bounds.extents.y, 0);
         PresentKeepHandler.Instance.AddPresent(this.id, present);
         gameObject.SetActive(false);
         this.present = present;
