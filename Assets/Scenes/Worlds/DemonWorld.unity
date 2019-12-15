@@ -1965,27 +1965,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7786851852587673525}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1656467790 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3328624684800996437, guid: c3cd1a627210f8f4aa7e104c4350ebc9,
-    type: 3}
-  m_PrefabInstance: {fileID: 7786851852587673525}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1656467788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 510f6f3382aaaba49acedc031e13d389, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &1656467791 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 6569480443165489200, guid: c3cd1a627210f8f4aa7e104c4350ebc9,
-    type: 3}
-  m_PrefabInstance: {fileID: 7786851852587673525}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1723720113 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6866635563054091908, guid: c3cd1a627210f8f4aa7e104c4350ebc9,
     type: 3}
   m_PrefabInstance: {fileID: 7786851852587673525}
   m_PrefabAsset: {fileID: 0}
@@ -2666,7 +2648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7786851851075054069
 Transform:
   m_ObjectHideFlags: 0
@@ -2719,7 +2701,7 @@ PrefabInstance:
     - target: {fileID: 656274444901502375, guid: 73c752fecfa56664c92c3611bd15101c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.21
+      value: -1.55
       objectReference: {fileID: 0}
     - target: {fileID: 656274444901502375, guid: 73c752fecfa56664c92c3611bd15101c,
         type: 3}
@@ -3020,7 +3002,7 @@ PrefabInstance:
     - target: {fileID: 656274444901502375, guid: 73c752fecfa56664c92c3611bd15101c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.21
+      value: -1.55
       objectReference: {fileID: 0}
     - target: {fileID: 656274444901502375, guid: 73c752fecfa56664c92c3611bd15101c,
         type: 3}
@@ -3210,7 +3192,7 @@ PrefabInstance:
     - target: {fileID: 656274444901502375, guid: 73c752fecfa56664c92c3611bd15101c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.21
+      value: -1.55
       objectReference: {fileID: 0}
     - target: {fileID: 656274444901502375, guid: 73c752fecfa56664c92c3611bd15101c,
         type: 3}
@@ -3564,7 +3546,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7786851851803854264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.7, y: 0.47, z: -6}
+  m_LocalPosition: {x: -16.7, y: 1.1300001, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7786851851199155986}
@@ -3961,22 +3943,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7786851852079135642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723720113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 131e509e52ce5a64e87bd9a53b5caaa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colliderLayer:
-    serializedVersion: 2
-    m_Bits: 2147483648
-  inventory: {fileID: 1656467790}
 --- !u!1001 &7786851852098231153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4161,7 +4127,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7786851852171434170}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.6161785, y: 2.2885623, z: -4.4799995}
+  m_LocalPosition: {x: 6.6161785, y: 2.2885623, z: -3.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7786851852532184765}
@@ -4698,7 +4664,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7786851852661069432}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.67, y: 2.2885623, z: -9.53}
+  m_LocalPosition: {x: 10.2, y: 2.2885623, z: -9.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7786851852794712800}

@@ -40,7 +40,8 @@ public class PlayerFloorController : MonoBehaviour
         }
 
         currentFloor = floor;
-        WorldStateMachine.Instance.currentFloor = currentFloor;
+        if(WorldStateMachine.Instance)
+            WorldStateMachine.Instance.currentFloor = currentFloor;
         floors[currentFloor].TeleportPlayer(player);
     }
 
