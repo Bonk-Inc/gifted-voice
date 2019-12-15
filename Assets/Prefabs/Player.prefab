@@ -313,7 +313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 6569480443165489200}
   inventory: {fileID: 3328624684800996437}
-  speed: 10
+  speed: 12
   maxWeight: 3
   encumberedMultiplier: 2
 --- !u!114 &1899768278
@@ -589,6 +589,31 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7342993213632658375, guid: 690ac1f5eb65d1840a79066d7680a10e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d6a7db7f22b879544af287211ca4fa1a, type: 2}
+    - target: {fileID: 5779308062548306029, guid: 690ac1f5eb65d1840a79066d7680a10e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d6a7db7f22b879544af287211ca4fa1a, type: 2}
+    - target: {fileID: 8830255034795570197, guid: 690ac1f5eb65d1840a79066d7680a10e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d6a7db7f22b879544af287211ca4fa1a, type: 2}
+    - target: {fileID: 5840889614990104107, guid: 690ac1f5eb65d1840a79066d7680a10e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d6a7db7f22b879544af287211ca4fa1a, type: 2}
+    - target: {fileID: 2497673097971672219, guid: 690ac1f5eb65d1840a79066d7680a10e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d6a7db7f22b879544af287211ca4fa1a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 690ac1f5eb65d1840a79066d7680a10e, type: 3}
 --- !u!4 &358727859775846130 stripped
