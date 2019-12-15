@@ -17,6 +17,7 @@ public class RoundManager : MonoBehaviour
     public static RoundManager Instance { get; private set; }
 
     public int LastRound => lastRound;
+    public int CurrentRound => currentRound;
 
     public bool RoundsOver { get; private set; }
 

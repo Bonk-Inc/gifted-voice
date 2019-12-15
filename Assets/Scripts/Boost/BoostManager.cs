@@ -50,4 +50,9 @@ public class BoostManager : MonoBehaviour
                 UseBoost(currentBoosts[i]);
         }
     }
+
+    public bool ContainsBoost(BoostType type, bool checkUsed)
+    {
+        return currentBoosts.Contains(type) || (checkUsed && usedBoosts.Contains(type));
+    }
 }
