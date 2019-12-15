@@ -8,6 +8,7 @@ public class BoostManager : MonoBehaviour
     private List<BoostType> currentBoosts = new List<BoostType>();
     private List<BoostType> usedBoosts = new List<BoostType>();
 
+    private List<BoostType> spawnedBoosts = new List<BoostType>();
     public static BoostManager Instance { get; private set; }
 
     public event Action<BoostType> BooostRegistered;
@@ -54,5 +55,15 @@ public class BoostManager : MonoBehaviour
     public bool ContainsBoost(BoostType type, bool checkUsed)
     {
         return currentBoosts.Contains(type) || (checkUsed && usedBoosts.Contains(type));
+    }
+
+    public bool HasSpawned(BoostType type)
+    {
+        return spawnedBoosts.Contains(type);
+    }
+
+    public void AddToSpawned(BoostType type)
+    {
+        spawnedBoosts.Add(type);
     }
 }

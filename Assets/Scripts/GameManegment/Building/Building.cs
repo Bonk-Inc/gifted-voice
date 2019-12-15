@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Building : MonoBehaviour
@@ -13,12 +14,17 @@ public class Building : MonoBehaviour
     [SerializeField]
     private Pickup[] pickups;
 
+    [SerializeField]
+    private List<BoostPickup> boosts;
+
     [SerializeField, Header("Stats")]
     private int minimalPickups = 10;
     [SerializeField]
     private int maximumPickups = 10;
     [SerializeField]
     private int maxTry = 10;
+
+    [SerializeField]
     private List<PickupSpot> pickupSpots;
     private int pickupAmount;
 
@@ -27,9 +33,11 @@ public class Building : MonoBehaviour
         pickupSpots = new List<PickupSpot>();
         BuildRooms();
 
+        boosts = boosts.Where(boost => !BoostManager.Instance.HasSpawned(boost.Type)).ToList();
+        InstantiateBoost();
+
         pickupAmount = SetPresentAmount();
         InstantiatePickups();
-
     }
 
     private void BuildRooms()
@@ -46,8 +54,7 @@ public class Building : MonoBehaviour
         }
     }
 
-    private int SetPresentAmount()
-    {
+    private int SetPresentAmount() {
         return Random.Range(minimalPickups, maximumPickups);
     }
 
@@ -65,20 +72,42 @@ public class Building : MonoBehaviour
             ResetPosition(currentPickup.transform, false, true);
         }
     }
+    private void InstantiateBoost()
+    {
 
-    private PickupSpot ChooseSpot() {
-        int spotNumber = Random.Range(0, pickupSpots.Count);
-        return pickupSpots[spotNumber];
+        
+        PickupSpot currentSpot = ChooseSpot(0);
+        print(currentSpot);
+        Pickup currentPickup = ChoosePickup(currentSpot.MaximumWeight, 0, boosts.ToArray());
+
+        currentPickup = Instantiate(currentPickup);
+        print(currentPickup + " " + currentPickup.name);
+        currentPickup.transform.SetParent(currentSpot.transform);
+        ResetPosition(currentPickup.transform, false, true);
     }
 
-    private Pickup ChoosePickup(int maximumWeight, int currentTry = 0)
+
+    private PickupSpot ChooseSpot(int minWeight = 0) {
+
+        var availibleSpots = pickupSpots;
+        if (minWeight > 0)
+        {
+            availibleSpots = availibleSpots.Where(spot => spot.MaximumWeight > minWeight).ToList();
+        }
+        print(availibleSpots.Count);
+        int spotNumber = Random.Range(0, availibleSpots.Count);
+        return availibleSpots[spotNumber];
+    }
+
+    private Pickup ChoosePickup(int maximumWeight, int currentTry = 0, Pickup[] pickups = null)
     {
+        pickups = pickups == null ? this.pickups : pickups;
         if (currentTry >= maxTry)
         {
             return null;
         }
         int pickupNumber = Random.Range(0, pickups.Length);
-        Pickup currentPickup = pickups[pickupNumber].Weight <= maximumWeight ? pickups[pickupNumber] : ChoosePickup(maximumWeight, currentTry + 1);
+        Pickup currentPickup = pickups[pickupNumber].Weight <= maximumWeight ? pickups[pickupNumber] : ChoosePickup(maximumWeight, currentTry + 1, pickups);
         
         return currentPickup;
     }
