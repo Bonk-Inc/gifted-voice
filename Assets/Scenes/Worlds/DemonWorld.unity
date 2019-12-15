@@ -769,6 +769,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1519811223, guid: 39e4ff2c827a8ec478a2cf80d98f8441, type: 3}
+      propertyPath: startTime
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 909425977, guid: 39e4ff2c827a8ec478a2cf80d98f8441, type: 3}
       propertyPath: m_textInfo.characterCount
       value: 0

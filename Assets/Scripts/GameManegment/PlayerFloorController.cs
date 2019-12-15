@@ -19,7 +19,8 @@ public class PlayerFloorController : MonoBehaviour
 
     private void Start()
     {
-        SetFloor(WorldStateMachine.Instance.currentFloor);
+        if (WorldStateMachine.Instance)
+            SetFloor(WorldStateMachine.Instance.currentFloor);
         for (int i = 0; i < floors.Length; i++)
         {
             floors[i].SetId(i);
