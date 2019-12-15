@@ -295,12 +295,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomLayouts:
-  - {fileID: 6968228851286530048, guid: fdc2c02508b2ec44cbbe7cbdf89b98d6, type: 3}
+  - {fileID: 0}
   roomSpots:
   - {fileID: 5046840652089907959}
   - {fileID: 5046840651069014572}
   - {fileID: 3016918849877579686}
   - {fileID: 5046840650690678184}
+  pickups: []
+  minimalPickups: 10
+  maximumPickups: 10
+  maxTry: 10
 --- !u!1 &3016918850482397903
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,6 +713,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 860c7ceb27e5fd44a9a61b276e064d84,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: df91c89a4e518404389741bc6860799a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c7ceb27e5fd44a9a61b276e064d84, type: 3}
 --- !u!1 &6557191183446534374 stripped
