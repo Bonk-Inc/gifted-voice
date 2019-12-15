@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class KarelsWorld : World
 {
+
+    [SerializeField]
+    private RoundManager roundManager;
+
     public override WorldType Name => WorldType.KarelsWorld;
 
     public override void CheckState(StateMachine<State<WorldType>, WorldType> stateMachine)
@@ -15,6 +19,7 @@ public class KarelsWorld : World
     public override void EnterState(WorldType oldState)
     {
         base.EnterState(oldState);
+        roundManager.NextRound();
     }
 
     public override void LeaveState(WorldType newState)

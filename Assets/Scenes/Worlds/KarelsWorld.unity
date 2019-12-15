@@ -120,6 +120,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &77419081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2569960945734884162, guid: 7eea2e6915fbf684d88501929e09c8b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2569960945783029575}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &77419084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77419081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f8fd92acb6ec7c468d8b118a786d584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastRound: 3
 --- !u!114 &427716152 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7422471966838267378, guid: 40987a1dc1a5ff5439302241e7a930ae,
@@ -513,5 +532,10 @@ PrefabInstance:
       propertyPath: sceneloader
       value: 
       objectReference: {fileID: 427716152}
+    - target: {fileID: 2569960945299190505, guid: 7eea2e6915fbf684d88501929e09c8b0,
+        type: 3}
+      propertyPath: roundManager
+      value: 
+      objectReference: {fileID: 77419084}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eea2e6915fbf684d88501929e09c8b0, type: 3}
