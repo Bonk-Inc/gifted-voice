@@ -20,12 +20,15 @@ public class BoostHandler : MonoBehaviour
 
     private void Start()
     {
-        BoostManager.Instance.BooostRegistered += StartBoost;
-        BoostManager.Instance.CheckBoosts((boostType) =>
+        if (BoostManager.Instance)
         {
-            StartBoost(boostType);
-            return false;
-        });
+            BoostManager.Instance.BooostRegistered += StartBoost;
+            BoostManager.Instance.CheckBoosts((boostType) =>
+            {
+                StartBoost(boostType);
+                return false;
+            });
+        }
     }
 
     private void StartBoost(BoostType boost)

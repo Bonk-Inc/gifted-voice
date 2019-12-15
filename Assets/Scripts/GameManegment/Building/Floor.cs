@@ -30,7 +30,7 @@ public class Floor : MonoBehaviour
     }
 
     public void TeleportPlayer(GameObject player) {
-        var playerMesh = player.GetComponent<MeshRenderer>();
+        var playerMesh = player.GetComponentInChildren<MeshRenderer>();
 
         player.transform.position = spawnLocation.position;
         player.transform.Translate(0, playerMesh.bounds.extents.y, 0);
