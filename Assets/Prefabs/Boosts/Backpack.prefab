@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3577884943713136176
+--- !u!1001 &1717505218482230304
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 8399747555769493293, guid: 0ee0039348990a6419a500fa46df81a3,
         type: 3}
       propertyPath: m_Name
-      value: Spinage
+      value: Backpack
       objectReference: {fileID: 0}
     - target: {fileID: 4545767901739721663, guid: 0ee0039348990a6419a500fa46df81a3,
         type: 3}
@@ -70,7 +70,7 @@ PrefabInstance:
     - target: {fileID: 6536576708789678608, guid: 0ee0039348990a6419a500fa46df81a3,
         type: 3}
       propertyPath: type
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ee0039348990a6419a500fa46df81a3, type: 3}
