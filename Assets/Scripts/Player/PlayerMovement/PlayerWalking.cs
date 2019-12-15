@@ -18,7 +18,7 @@ public class PlayerWalking : RigidbodyManipulator
     public int MaxWeight { get => maxWeight; set => maxWeight = value; }
 
 
-    private void Start()
+    private void Awake()
     {
         inventory.OnInventoryUpdate += CheckEncumbered;
     }
