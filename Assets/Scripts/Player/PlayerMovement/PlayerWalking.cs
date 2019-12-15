@@ -25,7 +25,6 @@ public class PlayerWalking : RigidbodyManipulator
 
     public void AddSpeed(float amount)
     {
-        print("what: " + amount);
         speed += amount;
     }
 }
