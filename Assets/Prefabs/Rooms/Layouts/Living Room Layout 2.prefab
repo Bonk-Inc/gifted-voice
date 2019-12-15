@@ -524,6 +524,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1724203642346658356, guid: c3d470e1e87a5cd4e954a3c7170e0978,
+        type: 3}
+      propertyPath: maximumWeight
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3d470e1e87a5cd4e954a3c7170e0978, type: 3}
 --- !u!4 &565251714339016578 stripped
@@ -610,6 +615,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724203642346658356, guid: c3d470e1e87a5cd4e954a3c7170e0978,
+        type: 3}
+      propertyPath: maximumWeight
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3d470e1e87a5cd4e954a3c7170e0978, type: 3}
@@ -701,7 +711,7 @@ PrefabInstance:
     - target: {fileID: 1724203642346658356, guid: c3d470e1e87a5cd4e954a3c7170e0978,
         type: 3}
       propertyPath: maximumWeight
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3d470e1e87a5cd4e954a3c7170e0978, type: 3}
@@ -790,6 +800,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1724203642346658356, guid: c3d470e1e87a5cd4e954a3c7170e0978,
+        type: 3}
+      propertyPath: maximumWeight
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3d470e1e87a5cd4e954a3c7170e0978, type: 3}
 --- !u!4 &5026123334211254123 stripped
@@ -876,6 +891,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724203642346658356, guid: c3d470e1e87a5cd4e954a3c7170e0978,
+        type: 3}
+      propertyPath: maximumWeight
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3d470e1e87a5cd4e954a3c7170e0978, type: 3}

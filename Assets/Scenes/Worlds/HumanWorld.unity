@@ -292,7 +292,7 @@ PrefabInstance:
     - target: {fileID: 3539530171787496680, guid: 7a382e3a88bbf0541a697d92ad3bdedb,
         type: 3}
       propertyPath: roomLayouts.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3539530171787496680, guid: 7a382e3a88bbf0541a697d92ad3bdedb,
         type: 3}
@@ -358,6 +358,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2822238392432743153, guid: 9d6cf7c8dfcec7740b79e0c828816923,
         type: 3}
+    - target: {fileID: 3539530171787496680, guid: 7a382e3a88bbf0541a697d92ad3bdedb,
+        type: 3}
+      propertyPath: roomLayouts.Array.data[3]
+      value: 
+      objectReference: {fileID: 1708976098694983783, guid: 92ba0eba8ae48fe4392899b7915814b2,
+        type: 3}
+    - target: {fileID: 3539530171787496680, guid: 7a382e3a88bbf0541a697d92ad3bdedb,
+        type: 3}
+      propertyPath: maximumPickups
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a382e3a88bbf0541a697d92ad3bdedb, type: 3}
 --- !u!114 &598648558 stripped
@@ -450,7 +461,7 @@ PrefabInstance:
       objectReference: {fileID: 598648558}
     - target: {fileID: 1899768277, guid: c3cd1a627210f8f4aa7e104c4350ebc9, type: 3}
       propertyPath: maxWeight
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1899768277, guid: c3cd1a627210f8f4aa7e104c4350ebc9, type: 3}
       propertyPath: speed
