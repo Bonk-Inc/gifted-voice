@@ -313,6 +313,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3539530171787496680, guid: 7a382e3a88bbf0541a697d92ad3bdedb,
         type: 3}
+      propertyPath: boosts.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3539530171787496680, guid: 7a382e3a88bbf0541a697d92ad3bdedb,
+        type: 3}
       propertyPath: roomLayouts.Array.data[1]
       value: 
       objectReference: {fileID: -2482220205881359018, guid: 55330ac51caae7a41a4f7999d7048c65,
@@ -376,6 +381,42 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1708976098694983783, guid: 92ba0eba8ae48fe4392899b7915814b2,
         type: 3}
+    - target: {fileID: 3539530171787496680, guid: 7a382e3a88bbf0541a697d92ad3bdedb,
+        type: 3}
+      propertyPath: boosts.Array.data[0]
+      value: 
+      objectReference: {fileID: 7715130723530529824, guid: fc198acd662c7bf4dbe5033f41084958,
+        type: 3}
+    - target: {fileID: 3539530171787496680, guid: 7a382e3a88bbf0541a697d92ad3bdedb,
+        type: 3}
+      propertyPath: boosts.Array.data[1]
+      value: 
+      objectReference: {fileID: 9100782226619111625, guid: 7c4190cc5278ceb4b84f0284ae44f080,
+        type: 3}
+    - target: {fileID: 3539530171787496680, guid: 7a382e3a88bbf0541a697d92ad3bdedb,
+        type: 3}
+      propertyPath: boosts.Array.data[2]
+      value: 
+      objectReference: {fileID: 1343235170727378210, guid: 36e80081bc7a5d7418a0cce90ad2c975,
+        type: 3}
+    - target: {fileID: 3539530171787496680, guid: 7a382e3a88bbf0541a697d92ad3bdedb,
+        type: 3}
+      propertyPath: boosts.Array.data[3]
+      value: 
+      objectReference: {fileID: 2909574665118297853, guid: 3938f1c9e2f5ce34cbf62575860fd28e,
+        type: 3}
+    - target: {fileID: 3539530171787496680, guid: 7a382e3a88bbf0541a697d92ad3bdedb,
+        type: 3}
+      propertyPath: boosts.Array.data[4]
+      value: 
+      objectReference: {fileID: 5318842850831750733, guid: 09919a9669e8e1148a4893f90ecb1eac,
+        type: 3}
+    - target: {fileID: 3539530171787496680, guid: 7a382e3a88bbf0541a697d92ad3bdedb,
+        type: 3}
+      propertyPath: boosts.Array.data[5]
+      value: 
+      objectReference: {fileID: 5576397551122474544, guid: a5803f14723f9194e8a79eaa6eba7448,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a382e3a88bbf0541a697d92ad3bdedb, type: 3}
 --- !u!114 &598648558 stripped
@@ -401,11 +442,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6569480443165489200, guid: c3cd1a627210f8f4aa7e104c4350ebc9,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 6569480443165489212, guid: c3cd1a627210f8f4aa7e104c4350ebc9,
         type: 3}
@@ -461,6 +497,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6569480443165489200, guid: c3cd1a627210f8f4aa7e104c4350ebc9,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 1899768277, guid: c3cd1a627210f8f4aa7e104c4350ebc9, type: 3}
       propertyPath: m_Enabled

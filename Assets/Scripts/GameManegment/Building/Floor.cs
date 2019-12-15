@@ -33,7 +33,9 @@ public class Floor : MonoBehaviour
         var playerMesh = player.GetComponent<MeshRenderer>();
 
         player.transform.position = spawnLocation.position;
-        player.transform.Translate(0, playerMesh.bounds.extents.y, 0);
+
+        if (playerMesh != null)
+            player.transform.Translate(0, playerMesh.bounds.extents.y, 0);
     }
 
 

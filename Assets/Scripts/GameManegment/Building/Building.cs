@@ -74,14 +74,16 @@ public class Building : MonoBehaviour
     }
     private void InstantiateBoost()
     {
-
-        
-        PickupSpot currentSpot = ChooseSpot(0);
-        print(currentSpot);
+        PickupSpot currentSpot = ChooseSpot(4);
+        if (currentSpot == null)
+            return;
         Pickup currentPickup = ChoosePickup(currentSpot.MaximumWeight, 0, boosts.ToArray());
-
+        if (currentPickup == null)
+            return;
+        pickupSpots.Remove(currentSpot);
         currentPickup = Instantiate(currentPickup);
-        print(currentPickup + " " + currentPickup.name);
+        if (currentPickup is BoostPickup)
+            BoostManager.Instance.AddToSpawned((currentPickup as BoostPickup).Type);
         currentPickup.transform.SetParent(currentSpot.transform);
         ResetPosition(currentPickup.transform, false, true);
     }
@@ -92,17 +94,17 @@ public class Building : MonoBehaviour
         var availibleSpots = pickupSpots;
         if (minWeight > 0)
         {
-            availibleSpots = availibleSpots.Where(spot => spot.MaximumWeight > minWeight).ToList();
+            availibleSpots = availibleSpots.Where(spot => spot.MaximumWeight >= minWeight).ToList();
         }
-        print(availibleSpots.Count);
+
         int spotNumber = Random.Range(0, availibleSpots.Count);
         return availibleSpots[spotNumber];
     }
 
     private Pickup ChoosePickup(int maximumWeight, int currentTry = 0, Pickup[] pickups = null)
     {
-        pickups = pickups == null ? this.pickups : pickups;
-        if (currentTry >= maxTry)
+        pickups = pickups ?? this.pickups;
+        if (currentTry >= maxTry || pickups.Length == 0)
         {
             return null;
         }
