@@ -34,8 +34,9 @@ public class PlayerFloorController : MonoBehaviour
 
     public void SetFloor(int floor)
     {
-        if(currentFloor >= floors.Length) {
+        if(floor >= floors.Length) {
             LastFloorCompleted?.Invoke();
+            WorldStateMachine.Instance.EndGame(true);
             return;
         }
 

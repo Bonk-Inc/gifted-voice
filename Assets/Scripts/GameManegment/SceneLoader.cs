@@ -7,6 +7,18 @@ public class SceneLoader : MonoBehaviour
 {
     private LoadScreenManager loadScreen;
 
+    public static SceneLoader Instance { get; private set;  }
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(this);
+            return;
+        }
+        Instance = this;
+    }
+
     private void Start()
     {
         loadScreen = LoadScreenManager.Instance;

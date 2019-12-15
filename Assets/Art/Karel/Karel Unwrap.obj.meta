@@ -3,7 +3,32 @@ guid: dfad4e10e4cc77440942294ae9219574
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair_KarelMat
+    second: {fileID: 2100000, guid: d6a7db7f22b879544af287211ca4fa1a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Karel_BodyMat
+    second: {fileID: 2100000, guid: d6a7db7f22b879544af287211ca4fa1a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Karel_BrowsMat
+    second: {fileID: 2100000, guid: d6a7db7f22b879544af287211ca4fa1a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Karel_EyesMat
+    second: {fileID: 2100000, guid: d6a7db7f22b879544af287211ca4fa1a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Karel_KurksMat
+    second: {fileID: 2100000, guid: d6a7db7f22b879544af287211ca4fa1a, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -69,11 +94,259 @@ ModelImporter:
     normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
+  copyAvatar: 1
   humanDescription:
     serializedVersion: 3
-    human: []
-    skeleton: []
+    human:
+    - boneName: Karel_0002:Root
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Karel_0002:L_Hip
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Karel_0002:R_Hip
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Karel_0002:L_Knee
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Karel_0002:R_Knee
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Karel_0002:L_Foot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Karel_0002:R_Foot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Karel_0002:Belly
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Karel_0002:Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Karel_0002:Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Karel_0002:L_Shoulder
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Karel_0002:R_Shoulder
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Karel_0002:L_Elbow
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Karel_0002:R_Elbow
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Karel_0002:L_Hand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Karel_0002:R_Hand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Karel Idle_2(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Karel_0002:Karel
+      parentName: Karel Idle_2(Clone)
+      position: {x: -0.0002649045, y: -0.000021010372, z: 0.0027002671}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Karel_0002:Hair
+      parentName: Karel_0002:Karel
+      position: {x: 0.0002649045, y: 0.000021010372, z: -0.0027002671}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Karel_0002:Brows
+      parentName: Karel_0002:Karel
+      position: {x: 0.0002649045, y: 0.000021010372, z: -0.0027002671}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Karel_0002:Eyes
+      parentName: Karel_0002:Karel
+      position: {x: 0.0002649045, y: 0.000021010372, z: -0.0027002671}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Karel_0002:Kurks
+      parentName: Karel_0002:Karel
+      position: {x: 0.0002649045, y: 0.000021010372, z: -0.0027002671}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Karel_0002:Body
+      parentName: Karel_0002:Karel
+      position: {x: 0.0002649045, y: 0.000021010372, z: -0.0027002671}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Karel_0002:Root
+      parentName: Karel Idle_2(Clone)
+      position: {x: 2.0372681e-10, y: 0.0018987076, z: 0}
+      rotation: {x: 0.49386665, y: -0.50605905, z: -0.49386665, w: 0.5060591}
+      scale: {x: 1.0000043, y: 1.0000043, z: 1.0000043}
+    - name: Karel_0002:Belly
+      parentName: Karel_0002:Root
+      position: {x: -0.0007073664, y: 5.2041703e-20, z: -7.8533445e-20}
+      rotation: {x: -0.9998222, y: 0.018857865, z: -0.000000029802319, w: 0.000000029802319}
+      scale: {x: 0.99999976, y: 1.0000011, z: 1.0000017}
+    - name: Karel_0002:Chest
+      parentName: Karel_0002:Belly
+      position: {x: -0.0012936932, y: 2.6921133e-18, z: 1.3811053e-19}
+      rotation: {x: 0.5033702, y: -0.49660692, z: 0.48985174, w: 0.5099463}
+      scale: {x: 0.99999946, y: 0.9999998, z: 0.99999964}
+    - name: Karel_0002:L_Shoulder
+      parentName: Karel_0002:Chest
+      position: {x: -0.0008988624, y: -5.3894836e-20, z: 1.3009146e-19}
+      rotation: {x: 0.9987254, y: 0.050473012, z: -0, w: 0.00000008940696}
+      scale: {x: 1.0000012, y: 1.0000021, z: 1.0000014}
+    - name: Karel_0002:L_Elbow
+      parentName: Karel_0002:L_Shoulder
+      position: {x: -0.00091265125, y: -1.575045e-19, z: -1.110223e-18}
+      rotation: {x: 0.00000011903824, y: 0.0000000063800796, z: -0.004068244, w: 0.9999917}
+      scale: {x: 1.0000002, y: 1.000002, z: 1.0000019}
+    - name: Karel_0002:L_Hand
+      parentName: Karel_0002:L_Elbow
+      position: {x: -0.0015196675, y: 1.4571677e-18, z: -5.551115e-19}
+      rotation: {x: 0.0000000055499925, y: -0.00000003332464, z: -0.13355498, w: 0.9910414}
+      scale: {x: 0.99999994, y: 1.0000044, z: 1.0000076}
+    - name: Karel_0002:Neck
+      parentName: Karel_0002:Chest
+      position: {x: -0.000013346835, y: 0.0004967978, z: 0.000036600708}
+      rotation: {x: -0, y: 0.000000029802319, z: -0.6975472, w: 0.71653897}
+      scale: {x: 1.0000055, y: 1.0000058, z: 0.99999994}
+    - name: Karel_0002:Head
+      parentName: Karel_0002:Neck
+      position: {x: -0.0015243235, y: -1.3877787e-19, z: 1.6653345e-18}
+      rotation: {x: -0, y: -0.000000029802319, z: 0.6975472, w: 0.71653897}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: Karel_0002:R_Shoulder
+      parentName: Karel_0002:Chest
+      position: {x: 0.00089756545, y: 0.000048262267, z: 1.3132635e-10}
+      rotation: {x: 0.00000008940696, y: 0.000000104308114, z: 0.2677553, w: 0.96348697}
+      scale: {x: 1, y: 0.9999996, z: 1.0000002}
+    - name: Karel_0002:R_Elbow
+      parentName: Karel_0002:R_Shoulder
+      position: {x: 0.0007595022, y: -0.00050604687, z: 4.9960034e-18}
+      rotation: {x: 0.00000007980913, y: 0.000000031581344, z: -0.025956493, w: 0.9996631}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000004}
+    - name: Karel_0002:R_Hand
+      parentName: Karel_0002:R_Elbow
+      position: {x: 0.0013066907, y: -0.00077586225, z: 6.661338e-18}
+      rotation: {x: -0.00000010431481, y: -0.000000014854258, z: -0.13355495, w: 0.9910415}
+      scale: {x: 0.99999833, y: 0.99999905, z: 0.99999833}
+    - name: Karel_0002:R_Hip
+      parentName: Karel_0002:Root
+      position: {x: 0.00017612953, y: -0.0000042958422, z: -0.00062438566}
+      rotation: {x: -0.057731602, y: 0.57467407, z: -0.8154347, w: 0.03851002}
+      scale: {x: 1.0000029, y: 1.0000027, z: 1.0000063}
+    - name: Karel_0002:R_Knee
+      parentName: Karel_0002:R_Hip
+      position: {x: -0.0007980357, y: -0.00009230875, z: -0.000036110338}
+      rotation: {x: -0.9983835, y: -0.056835614, z: -0.000000029802319, w: 0.000000059604638}
+      scale: {x: 1.000001, y: 0.9999987, z: 0.9999963}
+    - name: Karel_0002:R_Foot
+      parentName: Karel_0002:R_Knee
+      position: {x: -0.0007180288, y: -0.00008694113, z: -0.00017222605}
+      rotation: {x: -0.0007075444, y: -0.70710635, z: 0.70691353, w: -0.016534077}
+      scale: {x: 1.000003, y: 1.0000025, z: 1.0000031}
+    - name: Karel_0002:L_Hip
+      parentName: Karel_0002:Root
+      position: {x: 0.00017612861, y: -0.0000042956885, z: 0.0006243861}
+      rotation: {x: -0.09261928, y: 0.570092, z: -0.8162665, w: -0.011217355}
+      scale: {x: 1.000002, y: 1.0000005, z: 1.0000021}
+    - name: Karel_0002:L_Knee
+      parentName: Karel_0002:L_Hip
+      position: {x: -0.0008015261, y: -0.000054216165, z: -0.00003611}
+      rotation: {x: -0.9983835, y: -0.056835577, z: 0.000000029802319, w: 0.000000059604638}
+      scale: {x: 1.000001, y: 1.0000013, z: 0.9999993}
+    - name: Karel_0002:L_Foot
+      parentName: Karel_0002:L_Knee
+      position: {x: -0.0007211954, y: 0.000054719592, z: -0.00017223001}
+      rotation: {x: -0.00070745125, y: -0.70710635, z: 0.70691353, w: -0.016534073}
+      scale: {x: 1.0000027, y: 1.0000019, z: 1.0000023}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -82,12 +355,13 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: Karel_Body
+    rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 45e09f9c3ae7a0a4eb707b07537dc0a0,
+    type: 3}
+  animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

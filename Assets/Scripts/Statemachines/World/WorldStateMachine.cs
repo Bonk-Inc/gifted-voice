@@ -18,6 +18,8 @@ public class WorldStateMachine : StateMachine<World, WorldType>
 
     public int currentFloor;
 
+    public bool Won { get; private set; }
+
     private void Awake()
     {
         if (WorldStateMachine.instance && WorldStateMachine.instance != this)
@@ -36,16 +38,14 @@ public class WorldStateMachine : StateMachine<World, WorldType>
             TimerSingleton.Instance?.OnTimerFinished.AddListener(NextState);
         };
         if (stateSets) return;
-        for (int i = 0; i < worldStates.Length; i++)
-        {
+        for (int i = 0; i < worldStates.Length; i++) {
             stateSets = true;
             AddState(worldStates[i].Name, worldStates[i]);
             worldStates[i].SceneLoader = sceneloader;
         }
     }
 
-    public override void AddState(WorldType name, World state)
-    {
+    public override void AddState(WorldType name, World state){
         base.AddState(name, state);
     }
 
@@ -57,6 +57,15 @@ public class WorldStateMachine : StateMachine<World, WorldType>
     [ContextMenu("Next State")]
     public void NextState()
     {
-        CurrentState.NextState();
+        if (CurrentStateName == WorldType.DemonWorld && RoundManager.Instance.IsLastRound)
+            EndGame(false);
+        else
+            CurrentState.NextState();
+    }
+
+    public void EndGame(bool won)
+    {
+        this.Won = won;
+        SetState(WorldType.EndGame);
     }
 }
